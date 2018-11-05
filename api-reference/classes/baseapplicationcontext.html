@@ -106,6 +106,7 @@
 							<ul class="tsd-index-list">
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="baseapplicationcontext.html#basedir" class="tsd-kind-icon">base<wbr>Dir</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="baseapplicationcontext.html#configlocations" class="tsd-kind-icon">config<wbr>Locations</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class"><a href="baseapplicationcontext.html#dependencymap" class="tsd-kind-icon">dependency<wbr>Map</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-protected"><a href="baseapplicationcontext.html#lifecycles" class="tsd-kind-icon">life<wbr>Cycles</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="baseapplicationcontext.html#messagesource" class="tsd-kind-icon">message<wbr>Source</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="baseapplicationcontext.html#parent" class="tsd-kind-icon">parent</a></li>
@@ -130,6 +131,8 @@
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-overwrite tsd-is-inherited"><a href="baseapplicationcontext.html#addlistener" class="tsd-kind-icon">add<wbr>Listener</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="baseapplicationcontext.html#aftereachcreated" class="tsd-kind-icon">after<wbr>Each<wbr>Created</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="baseapplicationcontext.html#beforeeachcreated" class="tsd-kind-icon">before<wbr>Each<wbr>Created</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-protected"><a href="baseapplicationcontext.html#createobjectdependencytree" class="tsd-kind-icon">create<wbr>Object<wbr>Dependency<wbr>Tree</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="baseapplicationcontext.html#dumpdependency" class="tsd-kind-icon">dump<wbr>Dependency</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-overwrite tsd-is-inherited"><a href="baseapplicationcontext.html#emit" class="tsd-kind-icon">emit</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-overwrite tsd-is-inherited"><a href="baseapplicationcontext.html#eventnames" class="tsd-kind-icon">event<wbr>Names</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter"><a href="baseapplicationcontext.html#get" class="tsd-kind-icon">get</a></li>
@@ -174,7 +177,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/midwayjs/midway/blob/eafa040/packages/context/src/factory/applicationContext.ts#L105">context/src/factory/applicationContext.ts:105</a></li>
+									<li>Defined in <a href="https://github.com/midwayjs/midway/blob/ebdaf19/packages/context/src/factory/applicationContext.ts#L109">context/src/factory/applicationContext.ts:109</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -200,7 +203,7 @@
 					<aside class="tsd-sources">
 						<p>Implementation of <a href="../interfaces/iapplicationcontext.html">IApplicationContext</a>.<a href="../interfaces/iapplicationcontext.html#basedir">baseDir</a></p>
 						<ul>
-							<li>Defined in <a href="https://github.com/midwayjs/midway/blob/eafa040/packages/context/src/factory/applicationContext.ts#L100">context/src/factory/applicationContext.ts:100</a></li>
+							<li>Defined in <a href="https://github.com/midwayjs/midway/blob/ebdaf19/packages/context/src/factory/applicationContext.ts#L103">context/src/factory/applicationContext.ts:103</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -211,7 +214,18 @@
 					<aside class="tsd-sources">
 						<p>Implementation of <a href="../interfaces/iapplicationcontext.html">IApplicationContext</a>.<a href="../interfaces/iapplicationcontext.html#configlocations">configLocations</a></p>
 						<ul>
-							<li>Defined in <a href="https://github.com/midwayjs/midway/blob/eafa040/packages/context/src/factory/applicationContext.ts#L104">context/src/factory/applicationContext.ts:104</a></li>
+							<li>Defined in <a href="https://github.com/midwayjs/midway/blob/ebdaf19/packages/context/src/factory/applicationContext.ts#L107">context/src/factory/applicationContext.ts:107</a></li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
+					<a name="dependencymap" class="tsd-anchor"></a>
+					<h3>dependency<wbr>Map</h3>
+					<div class="tsd-signature tsd-kind-icon">dependency<wbr>Map<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Map</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">, </span><a href="../interfaces/objectdependencytree.html" class="tsd-signature-type">ObjectDependencyTree</a><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> =&nbsp;new Map()</span></div>
+					<aside class="tsd-sources">
+						<p>Implementation of <a href="../interfaces/iapplicationcontext.html">IApplicationContext</a>.<a href="../interfaces/iapplicationcontext.html#dependencymap">dependencyMap</a></p>
+						<ul>
+							<li>Defined in <a href="https://github.com/midwayjs/midway/blob/ebdaf19/packages/context/src/factory/applicationContext.ts#L109">context/src/factory/applicationContext.ts:109</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -221,7 +235,7 @@
 					<div class="tsd-signature tsd-kind-icon">life<wbr>Cycles<span class="tsd-signature-symbol">:</span> <a href="../interfaces/ilifecycle.html" class="tsd-signature-type">ILifeCycle</a><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> =&nbsp;[]</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/midwayjs/midway/blob/eafa040/packages/context/src/factory/applicationContext.ts#L98">context/src/factory/applicationContext.ts:98</a></li>
+							<li>Defined in <a href="https://github.com/midwayjs/midway/blob/ebdaf19/packages/context/src/factory/applicationContext.ts#L101">context/src/factory/applicationContext.ts:101</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -232,7 +246,7 @@
 					<aside class="tsd-sources">
 						<p>Implementation of <a href="../interfaces/iapplicationcontext.html">IApplicationContext</a>.<a href="../interfaces/iapplicationcontext.html#messagesource">messageSource</a></p>
 						<ul>
-							<li>Defined in <a href="https://github.com/midwayjs/midway/blob/eafa040/packages/context/src/factory/applicationContext.ts#L105">context/src/factory/applicationContext.ts:105</a></li>
+							<li>Defined in <a href="https://github.com/midwayjs/midway/blob/ebdaf19/packages/context/src/factory/applicationContext.ts#L108">context/src/factory/applicationContext.ts:108</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -243,7 +257,7 @@
 					<aside class="tsd-sources">
 						<p>Implementation of <a href="../interfaces/iapplicationcontext.html">IApplicationContext</a>.<a href="../interfaces/iapplicationcontext.html#parent">parent</a></p>
 						<ul>
-							<li>Defined in <a href="https://github.com/midwayjs/midway/blob/eafa040/packages/context/src/factory/applicationContext.ts#L102">context/src/factory/applicationContext.ts:102</a></li>
+							<li>Defined in <a href="https://github.com/midwayjs/midway/blob/ebdaf19/packages/context/src/factory/applicationContext.ts#L105">context/src/factory/applicationContext.ts:105</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -254,7 +268,7 @@
 					<aside class="tsd-sources">
 						<p>Implementation of <a href="../interfaces/iapplicationcontext.html">IApplicationContext</a>.<a href="../interfaces/iapplicationcontext.html#props">props</a></p>
 						<ul>
-							<li>Defined in <a href="https://github.com/midwayjs/midway/blob/eafa040/packages/context/src/factory/applicationContext.ts#L103">context/src/factory/applicationContext.ts:103</a></li>
+							<li>Defined in <a href="https://github.com/midwayjs/midway/blob/ebdaf19/packages/context/src/factory/applicationContext.ts#L106">context/src/factory/applicationContext.ts:106</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -264,7 +278,7 @@
 					<div class="tsd-signature tsd-kind-icon">readied<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> =&nbsp;false</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/midwayjs/midway/blob/eafa040/packages/context/src/factory/applicationContext.ts#L97">context/src/factory/applicationContext.ts:97</a></li>
+							<li>Defined in <a href="https://github.com/midwayjs/midway/blob/ebdaf19/packages/context/src/factory/applicationContext.ts#L100">context/src/factory/applicationContext.ts:100</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -274,7 +288,7 @@
 					<div class="tsd-signature tsd-kind-icon">refreshing<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> =&nbsp;false</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/midwayjs/midway/blob/eafa040/packages/context/src/factory/applicationContext.ts#L96">context/src/factory/applicationContext.ts:96</a></li>
+							<li>Defined in <a href="https://github.com/midwayjs/midway/blob/ebdaf19/packages/context/src/factory/applicationContext.ts#L99">context/src/factory/applicationContext.ts:99</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -285,7 +299,7 @@
 					<aside class="tsd-sources">
 						<p>Implementation of <a href="../interfaces/iobjectfactory.html">IObjectFactory</a>.<a href="../interfaces/iobjectfactory.html#registry">registry</a></p>
 						<ul>
-							<li>Defined in <a href="https://github.com/midwayjs/midway/blob/eafa040/packages/context/src/factory/applicationContext.ts#L101">context/src/factory/applicationContext.ts:101</a></li>
+							<li>Defined in <a href="https://github.com/midwayjs/midway/blob/ebdaf19/packages/context/src/factory/applicationContext.ts#L104">context/src/factory/applicationContext.ts:104</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -295,7 +309,7 @@
 					<div class="tsd-signature tsd-kind-icon">resolver<wbr>Factory<span class="tsd-signature-symbol">:</span> <a href="managedresolverfactory.html" class="tsd-signature-type">ManagedResolverFactory</a></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/midwayjs/midway/blob/eafa040/packages/context/src/factory/applicationContext.ts#L99">context/src/factory/applicationContext.ts:99</a></li>
+							<li>Defined in <a href="https://github.com/midwayjs/midway/blob/ebdaf19/packages/context/src/factory/applicationContext.ts#L102">context/src/factory/applicationContext.ts:102</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -323,7 +337,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/midwayjs/midway/blob/eafa040/packages/context/src/factory/applicationContext.ts#L233">context/src/factory/applicationContext.ts:233</a></li>
+									<li>Defined in <a href="https://github.com/midwayjs/midway/blob/ebdaf19/packages/context/src/factory/applicationContext.ts#L237">context/src/factory/applicationContext.ts:237</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
@@ -344,7 +358,7 @@
 							<aside class="tsd-sources">
 								<p>Implementation of <a href="../interfaces/iapplicationcontext.html">IApplicationContext</a>.<a href="../interfaces/iapplicationcontext.html#addlifecycle">addLifeCycle</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/midwayjs/midway/blob/eafa040/packages/context/src/factory/applicationContext.ts#L201">context/src/factory/applicationContext.ts:201</a></li>
+									<li>Defined in <a href="https://github.com/midwayjs/midway/blob/ebdaf19/packages/context/src/factory/applicationContext.ts#L205">context/src/factory/applicationContext.ts:205</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -413,7 +427,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/midwayjs/midway/blob/eafa040/packages/context/src/factory/applicationContext.ts#L259">context/src/factory/applicationContext.ts:259</a></li>
+									<li>Defined in <a href="https://github.com/midwayjs/midway/blob/ebdaf19/packages/context/src/factory/applicationContext.ts#L264">context/src/factory/applicationContext.ts:264</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -467,7 +481,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/midwayjs/midway/blob/eafa040/packages/context/src/factory/applicationContext.ts#L267">context/src/factory/applicationContext.ts:267</a></li>
+									<li>Defined in <a href="https://github.com/midwayjs/midway/blob/ebdaf19/packages/context/src/factory/applicationContext.ts#L272">context/src/factory/applicationContext.ts:272</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -508,6 +522,50 @@
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-protected">
+					<a name="createobjectdependencytree" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagProtected">Protected</span> create<wbr>Object<wbr>Dependency<wbr>Tree</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-protected">
+						<li class="tsd-signature tsd-kind-icon">create<wbr>Object<wbr>Dependency<wbr>Tree<span class="tsd-signature-symbol">(</span>identifier<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span>, definition<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/midwayjs/midway/blob/ebdaf19/packages/context/src/factory/applicationContext.ts#L276">context/src/factory/applicationContext.ts:276</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>identifier: <span class="tsd-signature-type">any</span></h5>
+								</li>
+								<li>
+									<h5>definition: <span class="tsd-signature-type">any</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="dumpdependency" class="tsd-anchor"></a>
+					<h3>dump<wbr>Dependency</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">dump<wbr>Dependency<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Implementation of <a href="../interfaces/iapplicationcontext.html">IApplicationContext</a>.<a href="../interfaces/iapplicationcontext.html#dumpdependency">dumpDependency</a></p>
+								<ul>
+									<li>Defined in <a href="https://github.com/midwayjs/midway/blob/ebdaf19/packages/context/src/factory/applicationContext.ts#L297">context/src/factory/applicationContext.ts:297</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">any</span></h4>
 						</li>
 					</ul>
 				</section>
@@ -569,7 +627,7 @@
 							<aside class="tsd-sources">
 								<p>Implementation of <a href="../interfaces/iobjectfactory.html">IObjectFactory</a>.<a href="../interfaces/iobjectfactory.html#get">get</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/midwayjs/midway/blob/eafa040/packages/context/src/factory/applicationContext.ts#L162">context/src/factory/applicationContext.ts:162</a></li>
+									<li>Defined in <a href="https://github.com/midwayjs/midway/blob/ebdaf19/packages/context/src/factory/applicationContext.ts#L166">context/src/factory/applicationContext.ts:166</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-type-parameters-title">Type parameters</h4>
@@ -602,7 +660,7 @@
 							<aside class="tsd-sources">
 								<p>Implementation of <a href="../interfaces/iobjectfactory.html">IObjectFactory</a>.<a href="../interfaces/iobjectfactory.html#getasync">getAsync</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/midwayjs/midway/blob/eafa040/packages/context/src/factory/applicationContext.ts#L185">context/src/factory/applicationContext.ts:185</a></li>
+									<li>Defined in <a href="https://github.com/midwayjs/midway/blob/ebdaf19/packages/context/src/factory/applicationContext.ts#L189">context/src/factory/applicationContext.ts:189</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-type-parameters-title">Type parameters</h4>
@@ -634,7 +692,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/midwayjs/midway/blob/eafa040/packages/context/src/factory/applicationContext.ts#L118">context/src/factory/applicationContext.ts:118</a></li>
+									<li>Defined in <a href="https://github.com/midwayjs/midway/blob/ebdaf19/packages/context/src/factory/applicationContext.ts#L122">context/src/factory/applicationContext.ts:122</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <a href="managedresolverfactory.html" class="tsd-signature-type">ManagedResolverFactory</a></h4>
@@ -670,7 +728,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/midwayjs/midway/blob/eafa040/packages/context/src/factory/applicationContext.ts#L125">context/src/factory/applicationContext.ts:125</a></li>
+									<li>Defined in <a href="https://github.com/midwayjs/midway/blob/ebdaf19/packages/context/src/factory/applicationContext.ts#L129">context/src/factory/applicationContext.ts:129</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -693,7 +751,7 @@
 							<aside class="tsd-sources">
 								<p>Implementation of <a href="../interfaces/iobjectfactory.html">IObjectFactory</a>.<a href="../interfaces/iobjectfactory.html#isasync">isAsync</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/midwayjs/midway/blob/eafa040/packages/context/src/factory/applicationContext.ts#L155">context/src/factory/applicationContext.ts:155</a></li>
+									<li>Defined in <a href="https://github.com/midwayjs/midway/blob/ebdaf19/packages/context/src/factory/applicationContext.ts#L159">context/src/factory/applicationContext.ts:159</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -766,7 +824,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/midwayjs/midway/blob/eafa040/packages/context/src/factory/applicationContext.ts#L151">context/src/factory/applicationContext.ts:151</a></li>
+									<li>Defined in <a href="https://github.com/midwayjs/midway/blob/ebdaf19/packages/context/src/factory/applicationContext.ts#L155">context/src/factory/applicationContext.ts:155</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -1045,7 +1103,7 @@
 							<aside class="tsd-sources">
 								<p>Implementation of <a href="../interfaces/iapplicationcontext.html">IApplicationContext</a>.<a href="../interfaces/iapplicationcontext.html#ready">ready</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/midwayjs/midway/blob/eafa040/packages/context/src/factory/applicationContext.ts#L135">context/src/factory/applicationContext.ts:135</a></li>
+									<li>Defined in <a href="https://github.com/midwayjs/midway/blob/ebdaf19/packages/context/src/factory/applicationContext.ts#L139">context/src/factory/applicationContext.ts:139</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></h4>
@@ -1063,7 +1121,7 @@
 							<aside class="tsd-sources">
 								<p>Implementation of <a href="../interfaces/iapplicationcontext.html">IApplicationContext</a>.<a href="../interfaces/iapplicationcontext.html#refreshasync">refreshAsync</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/midwayjs/midway/blob/eafa040/packages/context/src/factory/applicationContext.ts#L139">context/src/factory/applicationContext.ts:139</a></li>
+									<li>Defined in <a href="https://github.com/midwayjs/midway/blob/ebdaf19/packages/context/src/factory/applicationContext.ts#L143">context/src/factory/applicationContext.ts:143</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></h4>
@@ -1080,7 +1138,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/midwayjs/midway/blob/eafa040/packages/context/src/factory/applicationContext.ts#L242">context/src/factory/applicationContext.ts:242</a></li>
+									<li>Defined in <a href="https://github.com/midwayjs/midway/blob/ebdaf19/packages/context/src/factory/applicationContext.ts#L246">context/src/factory/applicationContext.ts:246</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -1113,7 +1171,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/midwayjs/midway/blob/eafa040/packages/context/src/factory/applicationContext.ts#L251">context/src/factory/applicationContext.ts:251</a></li>
+									<li>Defined in <a href="https://github.com/midwayjs/midway/blob/ebdaf19/packages/context/src/factory/applicationContext.ts#L256">context/src/factory/applicationContext.ts:256</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -1172,7 +1230,7 @@
 							<aside class="tsd-sources">
 								<p>Implementation of <a href="../interfaces/iapplicationcontext.html">IApplicationContext</a>.<a href="../interfaces/iapplicationcontext.html#removelifecycle">removeLifeCycle</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/midwayjs/midway/blob/eafa040/packages/context/src/factory/applicationContext.ts#L210">context/src/factory/applicationContext.ts:210</a></li>
+									<li>Defined in <a href="https://github.com/midwayjs/midway/blob/ebdaf19/packages/context/src/factory/applicationContext.ts#L214">context/src/factory/applicationContext.ts:214</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -1267,7 +1325,7 @@
 							<aside class="tsd-sources">
 								<p>Implementation of <a href="../interfaces/iapplicationcontext.html">IApplicationContext</a>.<a href="../interfaces/iapplicationcontext.html#stop">stop</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/midwayjs/midway/blob/eafa040/packages/context/src/factory/applicationContext.ts#L128">context/src/factory/applicationContext.ts:128</a></li>
+									<li>Defined in <a href="https://github.com/midwayjs/midway/blob/ebdaf19/packages/context/src/factory/applicationContext.ts#L132">context/src/factory/applicationContext.ts:132</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></h4>
@@ -1334,6 +1392,9 @@
 							<li class=" tsd-kind-property tsd-parent-kind-class">
 								<a href="baseapplicationcontext.html#configlocations" class="tsd-kind-icon">config<wbr>Locations</a>
 							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class">
+								<a href="baseapplicationcontext.html#dependencymap" class="tsd-kind-icon">dependency<wbr>Map</a>
+							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-protected">
 								<a href="baseapplicationcontext.html#lifecycles" class="tsd-kind-icon">life<wbr>Cycles</a>
 							</li>
@@ -1375,6 +1436,12 @@
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
 								<a href="baseapplicationcontext.html#beforeeachcreated" class="tsd-kind-icon">before<wbr>Each<wbr>Created</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-protected">
+								<a href="baseapplicationcontext.html#createobjectdependencytree" class="tsd-kind-icon">create<wbr>Object<wbr>Dependency<wbr>Tree</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="baseapplicationcontext.html#dumpdependency" class="tsd-kind-icon">dump<wbr>Dependency</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-overwrite tsd-is-inherited">
 								<a href="baseapplicationcontext.html#emit" class="tsd-kind-icon">emit</a>

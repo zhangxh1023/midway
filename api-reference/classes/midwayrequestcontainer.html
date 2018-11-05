@@ -106,6 +106,7 @@
 								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="midwayrequestcontainer.html#configlocations" class="tsd-kind-icon">config<wbr>Locations</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="midwayrequestcontainer.html#controllersids" class="tsd-kind-icon">controllers<wbr>Ids</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="midwayrequestcontainer.html#ctx" class="tsd-kind-icon">ctx</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="midwayrequestcontainer.html#dependencymap" class="tsd-kind-icon">dependency<wbr>Map</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="midwayrequestcontainer.html#handlermap" class="tsd-kind-icon">handler<wbr>Map</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="midwayrequestcontainer.html#id" class="tsd-kind-icon">id</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="midwayrequestcontainer.html#isready" class="tsd-kind-icon">is<wbr>Ready</a></li>
@@ -131,6 +132,8 @@
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="midwayrequestcontainer.html#beforeeachcreated" class="tsd-kind-icon">before<wbr>Each<wbr>Created</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter tsd-is-inherited"><a href="midwayrequestcontainer.html#bind" class="tsd-kind-icon">bind</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-overwrite tsd-is-inherited"><a href="midwayrequestcontainer.html#createchild" class="tsd-kind-icon">create<wbr>Child</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="midwayrequestcontainer.html#createobjectdependencytree" class="tsd-kind-icon">create<wbr>Object<wbr>Dependency<wbr>Tree</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="midwayrequestcontainer.html#dumpdependency" class="tsd-kind-icon">dump<wbr>Dependency</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-overwrite tsd-is-inherited"><a href="midwayrequestcontainer.html#emit" class="tsd-kind-icon">emit</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-overwrite tsd-is-inherited"><a href="midwayrequestcontainer.html#eventnames" class="tsd-kind-icon">event<wbr>Names</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter tsd-is-overwrite"><a href="midwayrequestcontainer.html#get" class="tsd-kind-icon">get</a></li>
@@ -185,7 +188,7 @@
 							<aside class="tsd-sources">
 								<p>Overrides BaseApplicationContext.__constructor</p>
 								<ul>
-									<li>Defined in <a href="https://github.com/midwayjs/midway/blob/eafa040/packages/midway-core/src/requestContainer.ts#L8">midway-core/src/requestContainer.ts:8</a></li>
+									<li>Defined in <a href="https://github.com/midwayjs/midway/blob/ebdaf19/packages/midway-core/src/requestContainer.ts#L8">midway-core/src/requestContainer.ts:8</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -207,7 +210,7 @@
 					<div class="tsd-signature tsd-kind-icon">application<wbr>Context<span class="tsd-signature-symbol">:</span> <a href="midwaycontainer.html" class="tsd-signature-type">MidwayContainer</a></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/midwayjs/midway/blob/eafa040/packages/midway-core/src/requestContainer.ts#L7">midway-core/src/requestContainer.ts:7</a></li>
+							<li>Defined in <a href="https://github.com/midwayjs/midway/blob/ebdaf19/packages/midway-core/src/requestContainer.ts#L7">midway-core/src/requestContainer.ts:7</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -240,7 +243,7 @@
 					<aside class="tsd-sources">
 						<p>Inherited from <a href="midwaycontainer.html">MidwayContainer</a>.<a href="midwaycontainer.html#controllersids">controllersIds</a></p>
 						<ul>
-							<li>Defined in <a href="https://github.com/midwayjs/midway/blob/eafa040/packages/midway-core/src/container.ts#L164">midway-core/src/container.ts:164</a></li>
+							<li>Defined in <a href="https://github.com/midwayjs/midway/blob/ebdaf19/packages/midway-core/src/container.ts#L164">midway-core/src/container.ts:164</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -250,7 +253,18 @@
 					<div class="tsd-signature tsd-kind-icon">ctx<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">any</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/midwayjs/midway/blob/eafa040/packages/midway-core/src/requestContainer.ts#L8">midway-core/src/requestContainer.ts:8</a></li>
+							<li>Defined in <a href="https://github.com/midwayjs/midway/blob/ebdaf19/packages/midway-core/src/requestContainer.ts#L8">midway-core/src/requestContainer.ts:8</a></li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
+					<a name="dependencymap" class="tsd-anchor"></a>
+					<h3>dependency<wbr>Map</h3>
+					<div class="tsd-signature tsd-kind-icon">dependency<wbr>Map<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Map</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">ObjectDependencyTree</span><span class="tsd-signature-symbol">&gt;</span></div>
+					<aside class="tsd-sources">
+						<p>Inherited from BaseApplicationContext.dependencyMap</p>
+						<ul>
+							<li>Defined in midway/node_modules/injection/dist/factory/applicationContext.d.ts:40</li>
 						</ul>
 					</aside>
 				</section>
@@ -261,7 +275,7 @@
 					<aside class="tsd-sources">
 						<p>Inherited from <a href="midwaycontainer.html">MidwayContainer</a>.<a href="midwaycontainer.html#handlermap">handlerMap</a></p>
 						<ul>
-							<li>Defined in <a href="https://github.com/midwayjs/midway/blob/eafa040/packages/midway-core/src/container.ts#L166">midway-core/src/container.ts:166</a></li>
+							<li>Defined in <a href="https://github.com/midwayjs/midway/blob/ebdaf19/packages/midway-core/src/container.ts#L166">midway-core/src/container.ts:166</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -283,7 +297,7 @@
 					<aside class="tsd-sources">
 						<p>Inherited from BaseApplicationContext.isReady</p>
 						<ul>
-							<li>Defined in midway/node_modules/injection/dist/factory/applicationContext.d.ts:55</li>
+							<li>Defined in midway/node_modules/injection/dist/factory/applicationContext.d.ts:56</li>
 						</ul>
 					</aside>
 				</section>
@@ -316,7 +330,7 @@
 					<aside class="tsd-sources">
 						<p>Inherited from <a href="midwaycontainer.html">MidwayContainer</a>.<a href="midwaycontainer.html#middlewaresids">middlewaresIds</a></p>
 						<ul>
-							<li>Defined in <a href="https://github.com/midwayjs/midway/blob/eafa040/packages/midway-core/src/container.ts#L165">midway-core/src/container.ts:165</a></li>
+							<li>Defined in <a href="https://github.com/midwayjs/midway/blob/ebdaf19/packages/midway-core/src/container.ts#L165">midway-core/src/container.ts:165</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -422,7 +436,7 @@
 							<aside class="tsd-sources">
 								<p>Inherited from BaseApplicationContext.addLifeCycle</p>
 								<ul>
-									<li>Defined in midway/node_modules/injection/dist/factory/applicationContext.d.ts:53</li>
+									<li>Defined in midway/node_modules/injection/dist/factory/applicationContext.d.ts:54</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -492,7 +506,7 @@
 							<aside class="tsd-sources">
 								<p>Inherited from BaseApplicationContext.afterEachCreated</p>
 								<ul>
-									<li>Defined in midway/node_modules/injection/dist/factory/applicationContext.d.ts:72</li>
+									<li>Defined in midway/node_modules/injection/dist/factory/applicationContext.d.ts:73</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -547,7 +561,7 @@
 							<aside class="tsd-sources">
 								<p>Inherited from BaseApplicationContext.beforeEachCreated</p>
 								<ul>
-									<li>Defined in midway/node_modules/injection/dist/factory/applicationContext.d.ts:77</li>
+									<li>Defined in midway/node_modules/injection/dist/factory/applicationContext.d.ts:78</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -664,10 +678,55 @@
 								<p>Inherited from <a href="midwaycontainer.html">MidwayContainer</a>.<a href="midwaycontainer.html#createchild">createChild</a></p>
 								<p>Overrides Container.createChild</p>
 								<ul>
-									<li>Defined in <a href="https://github.com/midwayjs/midway/blob/eafa040/packages/midway-core/src/container.ts#L255">midway-core/src/container.ts:255</a></li>
+									<li>Defined in <a href="https://github.com/midwayjs/midway/blob/ebdaf19/packages/midway-core/src/container.ts#L255">midway-core/src/container.ts:255</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">IContainer</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
+					<a name="createobjectdependencytree" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagProtected">Protected</span> create<wbr>Object<wbr>Dependency<wbr>Tree</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
+						<li class="tsd-signature tsd-kind-icon">create<wbr>Object<wbr>Dependency<wbr>Tree<span class="tsd-signature-symbol">(</span>identifier<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span>, definition<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Inherited from BaseApplicationContext.createObjectDependencyTree</p>
+								<ul>
+									<li>Defined in midway/node_modules/injection/dist/factory/applicationContext.d.ts:79</li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>identifier: <span class="tsd-signature-type">any</span></h5>
+								</li>
+								<li>
+									<h5>definition: <span class="tsd-signature-type">any</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+					<a name="dumpdependency" class="tsd-anchor"></a>
+					<h3>dump<wbr>Dependency</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+						<li class="tsd-signature tsd-kind-icon">dump<wbr>Dependency<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Inherited from BaseApplicationContext.dumpDependency</p>
+								<ul>
+									<li>Defined in midway/node_modules/injection/dist/factory/applicationContext.d.ts:80</li>
+								</ul>
+							</aside>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">any</span></h4>
 						</li>
 					</ul>
 				</section>
@@ -729,7 +788,7 @@
 							<aside class="tsd-sources">
 								<p>Overrides Container.get</p>
 								<ul>
-									<li>Defined in <a href="https://github.com/midwayjs/midway/blob/eafa040/packages/midway-core/src/requestContainer.ts#L42">midway-core/src/requestContainer.ts:42</a></li>
+									<li>Defined in <a href="https://github.com/midwayjs/midway/blob/ebdaf19/packages/midway-core/src/requestContainer.ts#L42">midway-core/src/requestContainer.ts:42</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-type-parameters-title">Type parameters</h4>
@@ -762,7 +821,7 @@
 							<aside class="tsd-sources">
 								<p>Overrides Container.getAsync</p>
 								<ul>
-									<li>Defined in <a href="https://github.com/midwayjs/midway/blob/eafa040/packages/midway-core/src/requestContainer.ts#L60">midway-core/src/requestContainer.ts:60</a></li>
+									<li>Defined in <a href="https://github.com/midwayjs/midway/blob/ebdaf19/packages/midway-core/src/requestContainer.ts#L60">midway-core/src/requestContainer.ts:60</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-type-parameters-title">Type parameters</h4>
@@ -819,7 +878,7 @@
 							<aside class="tsd-sources">
 								<p>Inherited from BaseApplicationContext.getManagedResolverFactory</p>
 								<ul>
-									<li>Defined in midway/node_modules/injection/dist/factory/applicationContext.d.ts:41</li>
+									<li>Defined in midway/node_modules/injection/dist/factory/applicationContext.d.ts:42</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">ManagedResolverFactory</span></h4>
@@ -857,7 +916,7 @@
 								<p>Inherited from <a href="midwaycontainer.html">MidwayContainer</a>.<a href="midwaycontainer.html#init">init</a></p>
 								<p>Overrides Container.init</p>
 								<ul>
-									<li>Defined in <a href="https://github.com/midwayjs/midway/blob/eafa040/packages/midway-core/src/container.ts#L168">midway-core/src/container.ts:168</a></li>
+									<li>Defined in <a href="https://github.com/midwayjs/midway/blob/ebdaf19/packages/midway-core/src/container.ts#L168">midway-core/src/container.ts:168</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
@@ -875,7 +934,7 @@
 							<aside class="tsd-sources">
 								<p>Inherited from BaseApplicationContext.isAsync</p>
 								<ul>
-									<li>Defined in midway/node_modules/injection/dist/factory/applicationContext.d.ts:50</li>
+									<li>Defined in midway/node_modules/injection/dist/factory/applicationContext.d.ts:51</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -949,7 +1008,7 @@
 							<aside class="tsd-sources">
 								<p>Inherited from <a href="midwaycontainer.html">MidwayContainer</a>.<a href="midwaycontainer.html#load">load</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/midwayjs/midway/blob/eafa040/packages/midway-core/src/container.ts#L188">midway-core/src/container.ts:188</a></li>
+									<li>Defined in <a href="https://github.com/midwayjs/midway/blob/ebdaf19/packages/midway-core/src/container.ts#L188">midway-core/src/container.ts:188</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -1295,7 +1354,7 @@
 							<aside class="tsd-sources">
 								<p>Inherited from BaseApplicationContext.ready</p>
 								<ul>
-									<li>Defined in midway/node_modules/injection/dist/factory/applicationContext.d.ts:47</li>
+									<li>Defined in midway/node_modules/injection/dist/factory/applicationContext.d.ts:48</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></h4>
@@ -1313,7 +1372,7 @@
 							<aside class="tsd-sources">
 								<p>Inherited from BaseApplicationContext.refreshAsync</p>
 								<ul>
-									<li>Defined in midway/node_modules/injection/dist/factory/applicationContext.d.ts:48</li>
+									<li>Defined in midway/node_modules/injection/dist/factory/applicationContext.d.ts:49</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></h4>
@@ -1332,7 +1391,7 @@
 								<p>Inherited from <a href="midwaycontainer.html">MidwayContainer</a>.<a href="midwaycontainer.html#registercustombinding">registerCustomBinding</a></p>
 								<p>Overrides Container.registerCustomBinding</p>
 								<ul>
-									<li>Defined in <a href="https://github.com/midwayjs/midway/blob/eafa040/packages/midway-core/src/container.ts#L365">midway-core/src/container.ts:365</a></li>
+									<li>Defined in <a href="https://github.com/midwayjs/midway/blob/ebdaf19/packages/midway-core/src/container.ts#L365">midway-core/src/container.ts:365</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -1359,7 +1418,7 @@
 							<aside class="tsd-sources">
 								<p>Inherited from <a href="midwaycontainer.html">MidwayContainer</a>.<a href="midwaycontainer.html#registerdatahandler">registerDataHandler</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/midwayjs/midway/blob/eafa040/packages/midway-core/src/container.ts#L361">midway-core/src/container.ts:361</a></li>
+									<li>Defined in <a href="https://github.com/midwayjs/midway/blob/ebdaf19/packages/midway-core/src/container.ts#L361">midway-core/src/container.ts:361</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -1404,7 +1463,7 @@
 							<aside class="tsd-sources">
 								<p>Inherited from BaseApplicationContext.registerDefinition</p>
 								<ul>
-									<li>Defined in midway/node_modules/injection/dist/factory/applicationContext.d.ts:61</li>
+									<li>Defined in midway/node_modules/injection/dist/factory/applicationContext.d.ts:62</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -1438,7 +1497,7 @@
 							<aside class="tsd-sources">
 								<p>Overrides <a href="midwaycontainer.html">MidwayContainer</a>.<a href="midwaycontainer.html#registereachcreatedhook">registerEachCreatedHook</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/midwayjs/midway/blob/eafa040/packages/midway-core/src/requestContainer.ts#L25">midway-core/src/requestContainer.ts:25</a></li>
+									<li>Defined in <a href="https://github.com/midwayjs/midway/blob/ebdaf19/packages/midway-core/src/requestContainer.ts#L25">midway-core/src/requestContainer.ts:25</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
@@ -1456,7 +1515,7 @@
 							<aside class="tsd-sources">
 								<p>Inherited from BaseApplicationContext.registerObject</p>
 								<ul>
-									<li>Defined in midway/node_modules/injection/dist/factory/applicationContext.d.ts:67</li>
+									<li>Defined in midway/node_modules/injection/dist/factory/applicationContext.d.ts:68</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -1533,7 +1592,7 @@
 							<aside class="tsd-sources">
 								<p>Inherited from BaseApplicationContext.removeLifeCycle</p>
 								<ul>
-									<li>Defined in midway/node_modules/injection/dist/factory/applicationContext.d.ts:54</li>
+									<li>Defined in midway/node_modules/injection/dist/factory/applicationContext.d.ts:55</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -1658,7 +1717,7 @@
 							<aside class="tsd-sources">
 								<p>Inherited from BaseApplicationContext.stop</p>
 								<ul>
-									<li>Defined in midway/node_modules/injection/dist/factory/applicationContext.d.ts:46</li>
+									<li>Defined in midway/node_modules/injection/dist/factory/applicationContext.d.ts:47</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></h4>
@@ -1675,7 +1734,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/midwayjs/midway/blob/eafa040/packages/midway-core/src/requestContainer.ts#L16">midway-core/src/requestContainer.ts:16</a></li>
+									<li>Defined in <a href="https://github.com/midwayjs/midway/blob/ebdaf19/packages/midway-core/src/requestContainer.ts#L16">midway-core/src/requestContainer.ts:16</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -1758,6 +1817,9 @@
 								<a href="midwayrequestcontainer.html#ctx" class="tsd-kind-icon">ctx</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
+								<a href="midwayrequestcontainer.html#dependencymap" class="tsd-kind-icon">dependency<wbr>Map</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
 								<a href="midwayrequestcontainer.html#handlermap" class="tsd-kind-icon">handler<wbr>Map</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
@@ -1816,6 +1878,12 @@
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-overwrite tsd-is-inherited">
 								<a href="midwayrequestcontainer.html#createchild" class="tsd-kind-icon">create<wbr>Child</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
+								<a href="midwayrequestcontainer.html#createobjectdependencytree" class="tsd-kind-icon">create<wbr>Object<wbr>Dependency<wbr>Tree</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+								<a href="midwayrequestcontainer.html#dumpdependency" class="tsd-kind-icon">dump<wbr>Dependency</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-overwrite tsd-is-inherited">
 								<a href="midwayrequestcontainer.html#emit" class="tsd-kind-icon">emit</a>
