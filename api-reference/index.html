@@ -64,105 +64,58 @@
 	<div class="row">
 		<div class="col-8 col-content">
 			<div class="tsd-panel tsd-typography">
-				<h1 id="midway">Midway</h1>
-				<p><a href="https://github.com/midwayjs/midway/blob/master/LICENSE"><img src="https://img.shields.io/badge/license-MIT-blue.svg" alt="GitHub license"></a>
-					<a href=""><img src="https://img.shields.io/github/tag/midwayjs/midway.svg" alt="GitHub tag"></a>
-					<a href="https://travis-ci.org/midwayjs/midway"><img src="https://travis-ci.org/midwayjs/midway.svg?branch=develop" alt="Build Status"></a>
-					<a href="https://codecov.io/gh/midwayjs/midway/branch/master"><img src="https://img.shields.io/codecov/c/github/midwayjs/midway/master.svg" alt="Test Coverage"></a>
-					<a href="http://packagequality.com/#?package=midway"><img src="http://npm.packagequality.com/shield/midway.svg" alt="Package Quality"></a>
-					<a href="https://lernajs.io/"><img src="https://img.shields.io/badge/maintained%20with-lerna-cc00ff.svg" alt="lerna"></a>
-					<a href="https://snyk.io/test/npm/midway"><img src="https://snyk.io/test/npm/midway/badge.svg" alt="Known Vulnerabilities"></a>
-					<a href="https://github.com/midwayjs/midway/pulls"><img src="https://img.shields.io/badge/PRs-welcome-brightgreen.svg" alt="PRs Welcome"></a>
-					<a href="https://www.codacy.com/app/czy88840616/midway?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=midwayjs/midway&amp;utm_campaign=Badge_Grade"><img src="https://api.codacy.com/project/badge/Grade/856737478fa94e78bce39d5fc2315cec" alt="Codacy Badge"></a>
-				<a href="#backers"><img src="https://opencollective.com/midway/backers/badge.svg" alt="Backers on Open Collective"></a> <a href="#sponsors"><img src="https://opencollective.com/midway/sponsors/badge.svg" alt="Sponsors on Open Collective"></a></p>
-				<p>Midway is a Node.js Web framework written by typescript, which uses the IoC injection mechanism to decouple the business logic of the application and make the development of large Node.js application easier and more natural.</p>
+				<h1 id="injection">Injection</h1>
+				<p><a href="http://packagequality.com/#?package=injection"><img src="http://npm.packagequality.com/shield/injection.svg" alt="Package Quality"></a>
+				<a href="https://github.com/midwayjs/midway/pulls"><img src="https://img.shields.io/badge/PRs-welcome-brightgreen.svg" alt="PRs Welcome"></a></p>
+				<p>Injection is a powerful inversion of control container that is widely used in the midway framework and brings good user experience. </p>
 				<h2 id="installation">Installation</h2>
-				<pre><code class="lang-bash">$ npm install midway --save
+				<pre><code class="lang-bash">$ npm install injection reflect-metadata --save
 </code></pre>
 				<p>Node.js &gt;= 8.0.0 required.</p>
-				<h2 id="features">Features</h2>
-				<ul>
-					<li>✔︎ Sophisticated group Middleware Architecture and compatibility</li>
-					<li>✔︎ Scalable plug-in capabilities and group plug-in Ecology</li>
-					<li>✔︎ Good application layering and decoupling capability</li>
-					<li>✔︎ A good development experience for the future</li>
-				</ul>
-				<h2 id="getting-started">Getting Started</h2>
-				<p>Follow the commands listed below.</p>
-				<pre><code class="lang-bash">$ npm install midway-init -g
-$ midway-init
-$ npm install
-$ npm run dev
-$ open http://localhost:7001
+				<blockquote>
+					<p>Injection requires TypeScript &gt;= 2.0 and the experimentalDecorators, emitDecoratorMetadata, types and lib compilation options in your tsconfig.json file.</p>
+				</blockquote>
+				<pre><code class="lang-json">{
+    <span class="hljs-attr">"compilerOptions"</span>: {
+        <span class="hljs-attr">"target"</span>: <span class="hljs-string">"ES2017"</span>,
+        <span class="hljs-attr">"lib"</span>: [<span class="hljs-string">"es2017"</span>, <span class="hljs-string">"dom"</span>],
+        <span class="hljs-attr">"types"</span>: [<span class="hljs-string">"reflect-metadata"</span>],
+        <span class="hljs-attr">"module"</span>: <span class="hljs-string">"commonjs"</span>,
+        <span class="hljs-attr">"moduleResolution"</span>: <span class="hljs-string">"node"</span>,
+        <span class="hljs-attr">"experimentalDecorators"</span>: <span class="hljs-literal">true</span>,
+        <span class="hljs-attr">"emitDecoratorMetadata"</span>: <span class="hljs-literal">true</span>
+    }
+}
 </code></pre>
-				<h2 id="packages">Packages</h2>
-				<p>midway is comprised of many specialized packages. This repository contains all these packages. Below you will find a summary of each package.</p>
-				<table>
-					<thead>
-						<tr>
-							<th>Package</th>
-							<th>Version</th>
-							<th>Dependencies</th>
-							<th>DevDependencies</th>
-						</tr>
-					</thead>
-					<tbody>
-						<tr>
-							<td><a href="https://github.com/midwayjs/midway/tree/master/packages/midway"><code>midway</code></a></td>
-							<td><a href="https://github.com/midwayjs/midway/tree/master/packages/midway/CHANGELOG.md"><img src="https://img.shields.io/npm/v/midway.svg?maxAge=86400" alt="npm (scoped)"></a></td>
-							<td><a href="https://david-dm.org/midwayjs/midway.svg?path=packages/midway"><img src="https://david-dm.org/midwayjs/midway.svg?path=packages/midway" alt="Dependency Status"></a></td>
-							<td><a href="https://david-dm.org/midwayjs/midway?path=packages/midway#info=devDependencies"><img src="https://david-dm.org/midwayjs/midway/dev-status.svg?path=packages/midway" alt="devDependency Status"></a></td>
-						</tr>
-						<tr>
-							<td><a href="https://github.com/midwayjs/midway/tree/master/packages/midway-web"><code>midway-web</code></a></td>
-							<td><a href="https://github.com/midwayjs/midway/tree/master/midway-web/CHANGELOG.md"><img src="https://img.shields.io/npm/v/midway-web.svg?maxAge=86400" alt="npm (scoped)"></a></td>
-							<td><a href="https://david-dm.org/midwayjs/midway.svg?path=packages/midway-web"><img src="https://david-dm.org/midwayjs/midway.svg?path=packages/midway-web" alt="Dependency Status"></a></td>
-							<td><a href="https://david-dm.org/midwayjs/midway?path=packages/midway-web#info=devDependencies"><img src="https://david-dm.org/midwayjs/midway/dev-status.svg?path=packages/midway-web" alt="devDependency Status"></a></td>
-						</tr>
-						<tr>
-							<td><a href="https://github.com/midwayjs/midway/tree/master/packages/midway-core"><code>midway-core</code></a></td>
-							<td><a href="https://github.com/midwayjs/midway/tree/master/midway-core/CHANGELOG.md"><img src="https://img.shields.io/npm/v/midway-core.svg?maxAge=86400" alt="npm (scoped)"></a></td>
-							<td><a href="https://david-dm.org/midwayjs/midway.svg?path=packages/midway-core"><img src="https://david-dm.org/midwayjs/midway.svg?path=packages/midway-core" alt="Dependency Status"></a></td>
-							<td><a href="https://david-dm.org/midwayjs/midway?path=packages/midway-core#info=devDependencies"><img src="https://david-dm.org/midwayjs/midway/dev-status.svg?path=packages/midway-core" alt="devDependency Status"></a></td>
-						</tr>
-						<tr>
-							<td><a href="https://github.com/midwayjs/midway/tree/master/packages/midway-mock"><code>midway-mock</code></a></td>
-							<td><a href="https://github.com/midwayjs/midway/tree/master/midway-mock/CHANGELOG.md"><img src="https://img.shields.io/npm/v/midway-mock.svg?maxAge=86400" alt="npm (scoped)"></a></td>
-							<td><a href="https://david-dm.org/midwayjs/midway.svg?path=packages/midway-mock"><img src="https://david-dm.org/midwayjs/midway.svg?path=packages/midway-mock" alt="Dependency Status"></a></td>
-							<td><a href="https://david-dm.org/midwayjs/midway?path=packages/midway-mock#info=devDependencies"><img src="https://david-dm.org/midwayjs/midway/dev-status.svg?path=packages/midway-mock" alt="devDependency Status"></a></td>
-						</tr>
-						<tr>
-							<td><a href="https://github.com/midwayjs/midway/tree/master/packages/midway-init"><code>midway-init</code></a></td>
-							<td><a href="https://github.com/midwayjs/midway/tree/master/midway-init/CHANGELOG.md"><img src="https://img.shields.io/npm/v/midway-init.svg?maxAge=86400" alt="npm (scoped)"></a></td>
-							<td><a href="https://david-dm.org/midwayjs/midway.svg?path=packages/midway-init"><img src="https://david-dm.org/midwayjs/midway.svg?path=packages/midway-init" alt="Dependency Status"></a></td>
-							<td><a href="https://david-dm.org/midwayjs/midway?path=packages/midway-init#info=devDependencies"><img src="https://david-dm.org/midwayjs/midway/dev-status.svg?path=packages/midway-init" alt="devDependency Status"></a></td>
-						</tr>
-						<tr>
-							<td><a href="https://github.com/midwayjs/midway/tree/master/packages/midway-bin"><code>midway-bin</code></a></td>
-							<td><a href="https://github.com/midwayjs/midway/tree/master/midway-bin/CHANGELOG.md"><img src="https://img.shields.io/npm/v/midway-bin.svg?maxAge=86400" alt="npm (scoped)"></a></td>
-							<td><a href="https://david-dm.org/midwayjs/midway.svg?path=packages/midway-bin"><img src="https://david-dm.org/midwayjs/midway.svg?path=packages/midway-bin" alt="Dependency Status"></a></td>
-							<td><a href="https://david-dm.org/midwayjs/midway?path=packages/midway-bin#info=devDependencies"><img src="https://david-dm.org/midwayjs/midway/dev-status.svg?path=packages/midway-bin" alt="devDependency Status"></a></td>
-						</tr>
-						<tr>
-							<td><a href="https://github.com/midwayjs/midway/tree/master/packages/midway-schedule"><code>midway-schedule</code></a></td>
-							<td><a href="https://github.com/midwayjs/midway/tree/master/midway-schedule/CHANGELOG.md"><img src="https://img.shields.io/npm/v/midway-schedule.svg?maxAge=86400" alt="npm (scoped)"></a></td>
-							<td><a href="https://david-dm.org/midwayjs/midway.svg?path=packages/midway-schedule"><img src="https://david-dm.org/midwayjs/midway.svg?path=packages/midway-schedule" alt="Dependency Status"></a></td>
-							<td><a href="https://david-dm.org/midwayjs/midway?path=packages/midway-schedule#info=devDependencies"><img src="https://david-dm.org/midwayjs/midway/dev-status.svg?path=packages/midway-schedule" alt="devDependency Status"></a></td>
-						</tr>
-						<tr>
-							<td><a href="https://github.com/midwayjs/midway/tree/master/packages/context"><code>injection</code></a></td>
-							<td><a href="https://github.com/midwayjs/midway/tree/master/context/CHANGELOG.md"><img src="https://img.shields.io/npm/v/injection.svg?maxAge=86400" alt="npm (scoped)"></a></td>
-							<td><a href="https://david-dm.org/midwayjs/midway.svg?path=packages/context"><img src="https://david-dm.org/midwayjs/midway.svg?path=packages/context" alt="Dependency Status"></a></td>
-							<td><a href="https://david-dm.org/midwayjs/midway?path=packages/context#info=devDependencies"><img src="https://david-dm.org/midwayjs/midway/dev-status.svg?path=packages/context" alt="devDependency Status"></a></td>
-						</tr>
-					</tbody>
-				</table>
-				<p>Globally: <a href="https://travis-ci.org/midwayjs/midway"><img src="https://img.shields.io/travis/midwayjs/midway/master.svg?style=flat" alt="Build Status"></a> <a href="https://david-dm.org/midwayjs/midway#info=devDependencies"><img src="https://david-dm.org/midwayjs/midway/dev-status.svg" alt="devDependency Status"></a></p>
-				<h2 id="contributors">Contributors</h2>
-				<p>Please let us know how can we help. Do check out <a href="http://github.com/midwayjs/midway/issues">issues</a> for bug reports or suggestions first.</p>
-				<p>To become a contributor, please follow our contributing guide.</p>
-				<p>This project exists thanks to all the people who contribute. [<a href="CONTRIBUTING.md">Contribute</a>].
-				<a href="https://github.com/midwayjs/midway/graphs/contributors"><img src="https://opencollective.com/midway/contributors.svg?width=890&button=false" /></a></p>
+				<h2 id="getting-started">Getting Started</h2>
+				<pre><code class="lang-ts">
+<span class="hljs-keyword">import</span> {container, provide, inject} <span class="hljs-keyword">from</span> <span class="hljs-string">'injection'</span>;
+
+<span class="hljs-meta">@provide</span>(<span class="hljs-string">'userModel'</span>)
+<span class="hljs-keyword">class</span> UserModel {
+
+}
+
+<span class="hljs-meta">@provide</span>(<span class="hljs-string">'userService'</span>)
+<span class="hljs-keyword">class</span> UserService {
+
+  <span class="hljs-meta">@inject</span>()
+  <span class="hljs-keyword">private</span> userModel;
+
+  <span class="hljs-keyword">async</span> getUser(uid) {
+    <span class="hljs-comment">// TODO</span>
+  }
+}
+
+
+<span class="hljs-keyword">const</span> container = <span class="hljs-keyword">new</span> Container();
+container.bind(UserService);
+container.bind(UserModel);
+
+<span class="hljs-keyword">const</span> userService = <span class="hljs-keyword">await</span> container.getAsync(<span class="hljs-string">'userService'</span>); 
+<span class="hljs-keyword">const</span> data = <span class="hljs-keyword">await</span> userService.getUser(<span class="hljs-number">123</span>);
+</code></pre>
+				<p>Document: <a href="https://midwayjs.org/midway/ioc.html#">https://midwayjs.org/midway/ioc.html</a></p>
 				<h2 id="license">License</h2>
 				<p><a href="(http://github.com/midwayjs/midway/blob/master/LICENSE">MIT</a>)</p>
 			</div>
