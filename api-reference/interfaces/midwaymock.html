@@ -86,8 +86,8 @@
 						<section class="tsd-index-section ">
 							<h3>Properties</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited"><a href="midwaymock.html#app" class="tsd-kind-icon">app</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited"><a href="midwaymock.html#cluster" class="tsd-kind-icon">cluster</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-overwrite"><a href="midwaymock.html#app" class="tsd-kind-icon">app</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-overwrite"><a href="midwaymock.html#cluster" class="tsd-kind-icon">cluster</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited"><a href="midwaymock.html#consolelevel" class="tsd-kind-icon">console<wbr>Level</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="midwaymock.html#container" class="tsd-kind-icon">container</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="midwaymock.html#default" class="tsd-kind-icon">default</a></li>
@@ -107,74 +107,64 @@
 			</section>
 			<section class="tsd-panel-group tsd-member-group ">
 				<h2>Properties</h2>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-overwrite">
 					<a name="app" class="tsd-anchor"></a>
 					<h3>app</h3>
 					<div class="tsd-signature tsd-kind-icon">app<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">function</span></div>
 					<aside class="tsd-sources">
-						<p>Inherited from EggMock.app</p>
+						<p>Overrides EggMock.app</p>
 						<ul>
-							<li>Defined in /home/travis/build/midwayjs/midway/node_modules/egg-mock/index.d.ts:97</li>
+							<li>Defined in <a href="https://github.com/midwayjs/midway/blob/ff2e5f6/packages/midway-mock/src/index.ts#L10">midway-mock/src/index.ts:10</a></li>
 						</ul>
 					</aside>
-					<div class="tsd-comment tsd-typography">
-						<div class="lead">
-							<p>Create a egg mocked application</p>
-						</div>
-					</div>
 					<div class="tsd-type-declaration">
 						<h4>Type declaration</h4>
 						<ul class="tsd-parameters">
 							<li class="tsd-parameter-siganture">
 								<ul class="tsd-signatures tsd-kind-type-literal tsd-parent-kind-property tsd-is-not-exported">
-									<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span>option<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">MockOption</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">MockApplication</span></li>
+									<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span>option<span class="tsd-signature-symbol">?: </span><a href="midwayapplicationoptions.html" class="tsd-signature-type">MidwayApplicationOptions</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="midwaymockapplication.html" class="tsd-signature-type">MidwayMockApplication</a></li>
 								</ul>
 								<ul class="tsd-descriptions">
 									<li class="tsd-description">
 										<h4 class="tsd-parameters-title">Parameters</h4>
 										<ul class="tsd-parameters">
 											<li>
-												<h5><span class="tsd-flag ts-flagOptional">Optional</span> option: <span class="tsd-signature-type">MockOption</span></h5>
+												<h5><span class="tsd-flag ts-flagOptional">Optional</span> option: <a href="midwayapplicationoptions.html" class="tsd-signature-type">MidwayApplicationOptions</a></h5>
 											</li>
 										</ul>
-										<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">MockApplication</span></h4>
+										<h4 class="tsd-returns-title">Returns <a href="midwaymockapplication.html" class="tsd-signature-type">MidwayMockApplication</a></h4>
 									</li>
 								</ul>
 							</li>
 						</ul>
 					</div>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-overwrite">
 					<a name="cluster" class="tsd-anchor"></a>
 					<h3>cluster</h3>
 					<div class="tsd-signature tsd-kind-icon">cluster<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">function</span></div>
 					<aside class="tsd-sources">
-						<p>Inherited from EggMock.cluster</p>
+						<p>Overrides EggMock.cluster</p>
 						<ul>
-							<li>Defined in /home/travis/build/midwayjs/midway/node_modules/egg-mock/index.d.ts:102</li>
+							<li>Defined in <a href="https://github.com/midwayjs/midway/blob/ff2e5f6/packages/midway-mock/src/index.ts#L11">midway-mock/src/index.ts:11</a></li>
 						</ul>
 					</aside>
-					<div class="tsd-comment tsd-typography">
-						<div class="lead">
-							<p>Create a mock cluster server, but you can&#39;t use API in application, you should test using supertest</p>
-						</div>
-					</div>
 					<div class="tsd-type-declaration">
 						<h4>Type declaration</h4>
 						<ul class="tsd-parameters">
 							<li class="tsd-parameter-siganture">
 								<ul class="tsd-signatures tsd-kind-type-literal tsd-parent-kind-property tsd-is-not-exported">
-									<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span>option<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">MockOption</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">MockApplication</span></li>
+									<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span>option<span class="tsd-signature-symbol">?: </span><a href="midwayapplicationoptions.html" class="tsd-signature-type">MidwayApplicationOptions</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="midwaymockapplication.html" class="tsd-signature-type">MidwayMockApplication</a></li>
 								</ul>
 								<ul class="tsd-descriptions">
 									<li class="tsd-description">
 										<h4 class="tsd-parameters-title">Parameters</h4>
 										<ul class="tsd-parameters">
 											<li>
-												<h5><span class="tsd-flag ts-flagOptional">Optional</span> option: <span class="tsd-signature-type">MockOption</span></h5>
+												<h5><span class="tsd-flag ts-flagOptional">Optional</span> option: <a href="midwayapplicationoptions.html" class="tsd-signature-type">MidwayApplicationOptions</a></h5>
 											</li>
 										</ul>
-										<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">MockApplication</span></h4>
+										<h4 class="tsd-returns-title">Returns <a href="midwaymockapplication.html" class="tsd-signature-type">MidwayMockApplication</a></h4>
 									</li>
 								</ul>
 							</li>
@@ -224,7 +214,7 @@
 					<div class="tsd-signature tsd-kind-icon">container<span class="tsd-signature-symbol">:</span> <a href="../globals.html#mockcontainer" class="tsd-signature-type">mockContainer</a></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/midwayjs/midway/blob/4dda68b/packages/midway-mock/src/index.ts#L7">midway-mock/src/index.ts:7</a></li>
+							<li>Defined in <a href="https://github.com/midwayjs/midway/blob/ff2e5f6/packages/midway-mock/src/index.ts#L8">midway-mock/src/index.ts:8</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -234,7 +224,7 @@
 					<div class="tsd-signature tsd-kind-icon">default<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">any</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/midwayjs/midway/blob/4dda68b/packages/midway-mock/src/index.ts#L8">midway-mock/src/index.ts:8</a></li>
+							<li>Defined in <a href="https://github.com/midwayjs/midway/blob/ff2e5f6/packages/midway-mock/src/index.ts#L9">midway-mock/src/index.ts:9</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -392,10 +382,10 @@
 					<li class="current tsd-kind-interface">
 						<a href="midwaymock.html" class="tsd-kind-icon">Midway<wbr>Mock</a>
 						<ul>
-							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
+							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-overwrite">
 								<a href="midwaymock.html#app" class="tsd-kind-icon">app</a>
 							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
+							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-overwrite">
 								<a href="midwaymock.html#cluster" class="tsd-kind-icon">cluster</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
