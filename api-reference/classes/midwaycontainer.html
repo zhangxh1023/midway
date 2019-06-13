@@ -97,10 +97,10 @@
 				<h2>Index</h2>
 				<section class="tsd-panel tsd-index-panel">
 					<div class="tsd-index-content">
-						<section class="tsd-index-section tsd-is-inherited">
+						<section class="tsd-index-section ">
 							<h3>Constructors</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-constructor tsd-parent-kind-class tsd-is-inherited"><a href="midwaycontainer.html#constructor" class="tsd-kind-icon">constructor</a></li>
+								<li class="tsd-kind-constructor tsd-parent-kind-class tsd-is-overwrite"><a href="midwaycontainer.html#constructor" class="tsd-kind-icon">constructor</a></li>
 							</ul>
 						</section>
 						<section class="tsd-index-section ">
@@ -114,6 +114,7 @@
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="midwaycontainer.html#handlermap" class="tsd-kind-icon">handler<wbr>Map</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="midwaycontainer.html#id" class="tsd-kind-icon">id</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="midwaycontainer.html#isready" class="tsd-kind-icon">is<wbr>Ready</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class"><a href="midwaycontainer.html#istsmode" class="tsd-kind-icon">is<wbr>TsMode</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="midwaycontainer.html#lifecycles" class="tsd-kind-icon">life<wbr>Cycles</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="midwaycontainer.html#messagesource" class="tsd-kind-icon">message<wbr>Source</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="midwaycontainer.html#middlewaresids" class="tsd-kind-icon">middlewares<wbr>Ids</a></li>
@@ -182,29 +183,32 @@
 					</div>
 				</section>
 			</section>
-			<section class="tsd-panel-group tsd-member-group tsd-is-inherited">
+			<section class="tsd-panel-group tsd-member-group ">
 				<h2>Constructors</h2>
-				<section class="tsd-panel tsd-member tsd-kind-constructor tsd-parent-kind-class tsd-is-inherited">
+				<section class="tsd-panel tsd-member tsd-kind-constructor tsd-parent-kind-class tsd-is-overwrite">
 					<a name="constructor" class="tsd-anchor"></a>
 					<h3>constructor</h3>
-					<ul class="tsd-signatures tsd-kind-constructor tsd-parent-kind-class tsd-is-inherited">
-						<li class="tsd-signature tsd-kind-icon">new <wbr>Midway<wbr>Container<span class="tsd-signature-symbol">(</span>baseDir<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span>, parent<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">IApplicationContext</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="midwaycontainer.html" class="tsd-signature-type">MidwayContainer</a></li>
+					<ul class="tsd-signatures tsd-kind-constructor tsd-parent-kind-class tsd-is-overwrite">
+						<li class="tsd-signature tsd-kind-icon">new <wbr>Midway<wbr>Container<span class="tsd-signature-symbol">(</span>baseDir<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span>, parent<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">IApplicationContext</span>, isTsMode<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="midwaycontainer.html" class="tsd-signature-type">MidwayContainer</a></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
-								<p>Inherited from BaseApplicationContext.__constructor</p>
+								<p>Overrides BaseApplicationContext.__constructor</p>
 								<ul>
-									<li>Defined in /home/travis/build/midwayjs/midway/node_modules/injection/dist/factory/applicationContext.d.ts:39</li>
+									<li>Defined in <a href="https://github.com/midwayjs/midway/blob/8ed6866/packages/midway-core/src/container.ts#L164">midway-core/src/container.ts:164</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5><span class="tsd-flag ts-flagOptional">Optional</span> baseDir: <span class="tsd-signature-type">string</span></h5>
+									<h5><span class="tsd-flag ts-flagDefault value">Default value</span> baseDir: <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> =&nbsp;process.cwd()</span></h5>
 								</li>
 								<li>
-									<h5><span class="tsd-flag ts-flagOptional">Optional</span> parent: <span class="tsd-signature-type">IApplicationContext</span></h5>
+									<h5><span class="tsd-flag ts-flagDefault value">Default value</span> parent: <span class="tsd-signature-type">IApplicationContext</span><span class="tsd-signature-symbol"> =&nbsp;undefined</span></h5>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagDefault value">Default value</span> isTsMode: <span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> =&nbsp;true</span></h5>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <a href="midwaycontainer.html" class="tsd-signature-type">MidwayContainer</a></h4>
@@ -242,7 +246,7 @@
 					<div class="tsd-signature tsd-kind-icon">controllers<wbr>Ids<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> =&nbsp;[]</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/midwayjs/midway/blob/83167cd/packages/midway-core/src/container.ts#L159">midway-core/src/container.ts:159</a></li>
+							<li>Defined in <a href="https://github.com/midwayjs/midway/blob/8ed6866/packages/midway-core/src/container.ts#L159">midway-core/src/container.ts:159</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -252,7 +256,7 @@
 					<div class="tsd-signature tsd-kind-icon">ctx<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">object</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/midwayjs/midway/blob/83167cd/packages/midway-core/src/container.ts#L163">midway-core/src/container.ts:163</a></li>
+							<li>Defined in <a href="https://github.com/midwayjs/midway/blob/8ed6866/packages/midway-core/src/container.ts#L163">midway-core/src/container.ts:163</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-type-declaration">
@@ -278,7 +282,7 @@
 					<div class="tsd-signature tsd-kind-icon">handler<wbr>Map<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Map</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">function</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/midwayjs/midway/blob/83167cd/packages/midway-core/src/container.ts#L161">midway-core/src/container.ts:161</a></li>
+							<li>Defined in <a href="https://github.com/midwayjs/midway/blob/8ed6866/packages/midway-core/src/container.ts#L161">midway-core/src/container.ts:161</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -301,6 +305,16 @@
 						<p>Inherited from BaseApplicationContext.isReady</p>
 						<ul>
 							<li>Defined in /home/travis/build/midwayjs/midway/node_modules/injection/dist/factory/applicationContext.d.ts:55</li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
+					<a name="istsmode" class="tsd-anchor"></a>
+					<h3>is<wbr>TsMode</h3>
+					<div class="tsd-signature tsd-kind-icon">is<wbr>TsMode<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">any</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/midwayjs/midway/blob/8ed6866/packages/midway-core/src/container.ts#L164">midway-core/src/container.ts:164</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -332,7 +346,7 @@
 					<div class="tsd-signature tsd-kind-icon">middlewares<wbr>Ids<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> =&nbsp;[]</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/midwayjs/midway/blob/83167cd/packages/midway-core/src/container.ts#L160">midway-core/src/container.ts:160</a></li>
+							<li>Defined in <a href="https://github.com/midwayjs/midway/blob/8ed6866/packages/midway-core/src/container.ts#L160">midway-core/src/container.ts:160</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -678,7 +692,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/midwayjs/midway/blob/83167cd/packages/midway-core/src/container.ts#L227">midway-core/src/container.ts:227</a></li>
+									<li>Defined in <a href="https://github.com/midwayjs/midway/blob/8ed6866/packages/midway-core/src/container.ts#L235">midway-core/src/container.ts:235</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -701,7 +715,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/midwayjs/midway/blob/83167cd/packages/midway-core/src/container.ts#L240">midway-core/src/container.ts:240</a></li>
+									<li>Defined in <a href="https://github.com/midwayjs/midway/blob/8ed6866/packages/midway-core/src/container.ts#L248">midway-core/src/container.ts:248</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -725,7 +739,7 @@
 							<aside class="tsd-sources">
 								<p>Overrides Container.createChild</p>
 								<ul>
-									<li>Defined in <a href="https://github.com/midwayjs/midway/blob/83167cd/packages/midway-core/src/container.ts#L268">midway-core/src/container.ts:268</a></li>
+									<li>Defined in <a href="https://github.com/midwayjs/midway/blob/8ed6866/packages/midway-core/src/container.ts#L278">midway-core/src/container.ts:278</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">IContainer</span></h4>
@@ -769,7 +783,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/midwayjs/midway/blob/83167cd/packages/midway-core/src/container.ts#L347">midway-core/src/container.ts:347</a></li>
+									<li>Defined in <a href="https://github.com/midwayjs/midway/blob/8ed6866/packages/midway-core/src/container.ts#L357">midway-core/src/container.ts:357</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -1000,7 +1014,7 @@
 							<aside class="tsd-sources">
 								<p>Overrides Container.init</p>
 								<ul>
-									<li>Defined in <a href="https://github.com/midwayjs/midway/blob/83167cd/packages/midway-core/src/container.ts#L165">midway-core/src/container.ts:165</a></li>
+									<li>Defined in <a href="https://github.com/midwayjs/midway/blob/8ed6866/packages/midway-core/src/container.ts#L171">midway-core/src/container.ts:171</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
@@ -1091,7 +1105,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/midwayjs/midway/blob/83167cd/packages/midway-core/src/container.ts#L198">midway-core/src/container.ts:198</a></li>
+									<li>Defined in <a href="https://github.com/midwayjs/midway/blob/8ed6866/packages/midway-core/src/container.ts#L206">midway-core/src/container.ts:206</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -1473,7 +1487,7 @@
 							<aside class="tsd-sources">
 								<p>Overrides Container.registerCustomBinding</p>
 								<ul>
-									<li>Defined in <a href="https://github.com/midwayjs/midway/blob/83167cd/packages/midway-core/src/container.ts#L365">midway-core/src/container.ts:365</a></li>
+									<li>Defined in <a href="https://github.com/midwayjs/midway/blob/8ed6866/packages/midway-core/src/container.ts#L375">midway-core/src/container.ts:375</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -1499,7 +1513,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/midwayjs/midway/blob/83167cd/packages/midway-core/src/container.ts#L361">midway-core/src/container.ts:361</a></li>
+									<li>Defined in <a href="https://github.com/midwayjs/midway/blob/8ed6866/packages/midway-core/src/container.ts#L371">midway-core/src/container.ts:371</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -1577,7 +1591,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/midwayjs/midway/blob/83167cd/packages/midway-core/src/container.ts#L274">midway-core/src/container.ts:274</a></li>
+									<li>Defined in <a href="https://github.com/midwayjs/midway/blob/8ed6866/packages/midway-core/src/container.ts#L284">midway-core/src/container.ts:284</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
@@ -1814,7 +1828,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/midwayjs/midway/blob/83167cd/packages/midway-core/src/container.ts#L190">midway-core/src/container.ts:190</a></li>
+									<li>Defined in <a href="https://github.com/midwayjs/midway/blob/8ed6866/packages/midway-core/src/container.ts#L198">midway-core/src/container.ts:198</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -1887,7 +1901,7 @@
 					<li class="current tsd-kind-class">
 						<a href="midwaycontainer.html" class="tsd-kind-icon">Midway<wbr>Container</a>
 						<ul>
-							<li class=" tsd-kind-constructor tsd-parent-kind-class tsd-is-inherited">
+							<li class=" tsd-kind-constructor tsd-parent-kind-class tsd-is-overwrite">
 								<a href="midwaycontainer.html#constructor" class="tsd-kind-icon">constructor</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
@@ -1913,6 +1927,9 @@
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
 								<a href="midwaycontainer.html#isready" class="tsd-kind-icon">is<wbr>Ready</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class">
+								<a href="midwaycontainer.html#istsmode" class="tsd-kind-icon">is<wbr>TsMode</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
 								<a href="midwaycontainer.html#lifecycles" class="tsd-kind-icon">life<wbr>Cycles</a>
