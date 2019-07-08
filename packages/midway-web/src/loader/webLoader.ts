@@ -240,7 +240,6 @@ export class MidwayWebLoader extends EggLoader {
 
   }
 
-
   private async handlerWebMiddleware<T extends any = any>(
     middlewares: T[],
     handlerCallback: (ps: T | ReturnType<WebMiddleware['resolve']>) => any,
