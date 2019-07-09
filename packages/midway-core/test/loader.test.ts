@@ -29,7 +29,7 @@ describe('/test/loader.test.ts', () => {
     assert(requestCtx === await appCtx.getAsync('requestContext'));
   });
 
-  it('should load ts file and use config, plugin decorator', async () => {
+  it.only('should load ts file and use config, plugin decorator', async () => {
     const loader = new ContainerLoader({
       baseDir: path.join(__dirname, './fixtures/base-app-decorator/src')
     });
@@ -59,9 +59,9 @@ describe('/test/loader.test.ts', () => {
 
     const context = {logger: console};
     const requestCtx = loader.getRequestContext();
-    requestCtx.updateContext(context);
-    const baseServiceCtx = await requestCtx.getAsync('baseService');
-    const baseServiceCtx1 = await requestCtx.getAsync('baseService');
+    const reqCtx = requestCtx.createContext(context);
+    const baseServiceCtx = await reqCtx.getAsync('baseService');
+    const baseServiceCtx1 = await reqCtx.getAsync('baseService');
     assert(baseServiceCtx === baseServiceCtx1);
     assert(baseServiceCtx.config === 'hello');
     assert(baseServiceCtx.logger === console);
@@ -91,9 +91,9 @@ describe('/test/loader.test.ts', () => {
 
     const context = {logger: console};
     const requestCtx = loader.getRequestContext();
-    requestCtx.updateContext(context);
+    const reqCtx = requestCtx.createContext(context);
     const module = require(path.join(__dirname, './fixtures/base-app-constructor/src/lib/service'));
-    const baseServiceCtx = await requestCtx.getAsync(module['BaseService']);
+    const baseServiceCtx = await reqCtx.getAsync(module['BaseService']);
     assert(baseServiceCtx.config.c === 120);
     assert(baseServiceCtx.plugin2.text === 2);
     assert(baseServiceCtx.logger === console);
@@ -122,8 +122,8 @@ describe('/test/loader.test.ts', () => {
 
     const context = {logger: console};
     const requestCtx = loader.getRequestContext();
-    requestCtx.updateContext(context);
-    const baseServiceCtx = await requestCtx.getAsync('baseService');
+    const reqCtx = requestCtx.createContext(context);
+    const baseServiceCtx = await reqCtx.getAsync('baseService');
     assert(baseServiceCtx.factory('google'));
   });
 

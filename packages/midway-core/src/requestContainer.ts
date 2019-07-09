@@ -16,43 +16,9 @@ export class MidwayRequestContainer extends MidwayContainer {
     return createRequestContext(this, ctx);
   }
 
-  get<T>(identifier: any, args?: any) {
-    if (typeof identifier !== 'string') {
-      identifier = this.getIdentifier(identifier);
-    }
-    const definition = this.applicationContext.registry.getDefinition(identifier);
-    if (definition && definition.isRequestScope()) {
-      // create object from applicationContext definition for requestScope
-      return this.resolverFactory.create(definition, args);
-    }
-
-    if (this.parent) {
-      return this.parent.get(identifier, args);
-    }
-  }
-
-  async getAsync<T>(identifier: any, args?: any) {
-    if (typeof identifier !== 'string') {
-      identifier = this.getIdentifier(identifier);
-    }
-
-    const definition = this.applicationContext.registry.getDefinition(identifier);
-    if (definition && definition.isRequestScope()) {
-      if (definition.creator.constructor.name === 'FunctionWrapperCreator') {
-        const valueManagedIns = new ManagedValue(this, VALUE_TYPE.OBJECT);
-        definition.constructorArgs = [valueManagedIns];
-      }
-      // create object from applicationContext definition for requestScope
-      return this.resolverFactory.createAsync(definition, args);
-    }
-
-    if (this.parent) {
-      return this.parent.getAsync<T>(identifier, args);
-    }
-  }
 }
 
-export const createRequestContext = async (applicationContext, ctx) => {
+export const createRequestContext = (applicationContext, ctx) => {
   const requestContainer = new Proxy(applicationContext, {
     get(target, property) {
       const self: any = this;
@@ -82,16 +48,26 @@ export const createRequestContext = async (applicationContext, ctx) => {
               identifier = target.getIdentifier(identifier);
             }
 
-            const definition = target.registry.getDefinition(identifier);
+            if (self.objectCache.has(identifier)) {
+              return self.objectCache.get(identifier);
+            }
+
+            const definition = target.parent.registry.getDefinition(identifier);
             if (definition && definition.isRequestScope()) {
+              if (definition.creator.constructor.name === 'FunctionWrapperCreator') {
+                const valueManagedIns = new ManagedValue(this, VALUE_TYPE.OBJECT);
+                definition.constructorArgs = [valueManagedIns];
+              }
               if (!self.objectCache.has(identifier)) {
                 // create object from applicationContext definition for requestScope
-                self.objectCache.set(definition.id, target.getAsync(identifier, args));
+                self.objectCache.set(definition.id, target.resolverFactory.create(definition, args));
               }
               return self.objectCache.get(definition.id);
             }
 
-            return target.getAsync(identifier, args);
+            if (target.parent) {
+              return target.parent.get(identifier, args);
+            }
           };
         case 'getAsync':
           return async (identifier, args) => {
@@ -99,19 +75,31 @@ export const createRequestContext = async (applicationContext, ctx) => {
               identifier = target.getIdentifier(identifier);
             }
 
-            const definition = target.registry.getDefinition(identifier);
+            // return logger, ctx or other target
+            if (self.objectCache.has(identifier)) {
+              return self.objectCache.get(identifier);
+            }
+
+            // current registry always empty, must get info from parent
+            const definition = target.parent.registry.getDefinition(identifier);
             if (definition && definition.isRequestScope()) {
+              if (definition.creator.constructor.name === 'FunctionWrapperCreator') {
+                const valueManagedIns = new ManagedValue(this, VALUE_TYPE.OBJECT);
+                definition.constructorArgs = [valueManagedIns];
+              }
               if (!self.objectCache.has(identifier)) {
                 // create object from applicationContext definition for requestScope
-                self.objectCache.set(definition.id, target.getAsync(identifier, args));
+                self.objectCache.set(definition.id, await target.getAsync.call(self, definition.id, args));
               }
               return self.objectCache.get(definition.id);
             }
 
-            return target.getAsync(identifier, args);
+            if (target.parent) {
+              return target.parent.getAsync(identifier, args);
+            }
           };
         default:
-          return target[property];
+          return target[property].bind(this);
       }
 
     }

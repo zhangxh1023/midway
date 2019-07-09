@@ -6,8 +6,7 @@ module.exports = {
   get requestContext() {
     if (!this[rc]) {
       const requestContext = this.app.applicationContext.get('requestContext');
-      requestContext.updateContext(this);
-      this[rc] = requestContext;
+      this[rc] = requestContext.createContext(this);
     }
     return this[rc];
   },
